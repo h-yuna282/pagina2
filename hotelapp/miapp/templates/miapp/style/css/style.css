@@ -1,0 +1,34 @@
+
+ ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none inside;
+}
+
+ul.slider {
+    position:relative; 
+}
+
+ul.slider li {
+    opacity: 0; 
+    transition: opacity .5s;
+    position: absolute; 
+    left: 0px;
+    top: 0px;
+    margin:50px;
+    padding:50px;
+    border:2px solid red;
+    background:#fff;
+    
+}
+ul.slider li:first-child {
+    opacity: 1;
+}
+ul.slider li:target {
+    opacity: 1; 
+}
+nav {
+    position:relative;
+    top:200px;
+    left:50px;
+}

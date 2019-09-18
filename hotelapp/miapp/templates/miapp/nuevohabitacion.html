@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block principal %}
+
+<h2>Nueva habitacion</h2>
+<hr>
+   
+<div id="formdiv">
+
+        <form  action="#" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+    
+                <div style="text-align: center;">
+                        <button type="submit" class="btn btn-success">Enviar </button>
+                </div>
+                
+        </form>
+    </div>
+
+   
+
+{% endblock %}

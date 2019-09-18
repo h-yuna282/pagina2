@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block principal %}
+
+<h2>editar habitacion</h2>
+<hr>
+   
+<div id="formdiv">
+    <form action="#" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">editar datos</button>
+        
+    </form>
+
+</div>
+
+     
+
+{% endblock %}

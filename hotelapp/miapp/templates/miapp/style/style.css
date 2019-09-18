@@ -1,0 +1,93 @@
+html {
+    height:106%;
+    width:94%;
+}
+body{
+    background:#8ba987 ('Imagenes/avatar.jpg') no-repeat center center;
+    background-size:100% 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    width: 95%;
+}
+
+header img{
+    border-radius: 20%;
+    float: left;
+    margin-left: 1.0em;
+} 
+
+
+
+ header nav{
+        margin: 5em 0em 0em 7em;
+        border: 50px solid#FF5B64;
+           
+ }
+
+ header nav ul{
+        list-style: none;
+        width: 97%;
+ }
+    
+ header nav ul li{
+        display:inline-block;
+        margin: 0.1em;
+        background: #ffbcac;
+        border: 1px solid black;
+        padding: 0.2em 0.5em;
+        width: 8.4em;
+        
+ }
+header nav ul li a{
+        display:inline-block;
+       color:#ff7c5d;
+        text-decoration: black;
+        border: 1px solid yellow;
+        padding:0.1em 0em;
+        text-align: center;
+        width: 8.4em;
+    
+        
+ }
+    
+header{
+    background : rgb(216, 7, 17);
+    color : black;
+    width: 111%;
+   
+}
+    
+ section{
+        clear: both;
+        background:white;
+        padding: 2em;
+        width: 106%;
+      
+    
+    
+}
+ p{
+        text-align: justify;
+}
+
+ h1{
+        text-align: center;
+  }
+    
+  h2{
+       text-align: center;
+ }
+H4{
+       text-align:  justify;
+}
+   
+footer{
+        clear: both;
+        background: rgb(169, 224, 224) ;
+        padding: 2em;
+        width: 95%;
+ }
+
+ 
+   
+  

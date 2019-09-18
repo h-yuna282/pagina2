@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block principal %}
+
+<p>¿ Esta seguro de eliminar la habitacion {{ object.nombre }} ?</p>
+<form action="" method="post">
+    {% csrf_token %}
+    <button type="submit">Eliminar</button>
+</form>
+
+<a href="{% url 'Listarhabitacion' %}">Cancelar</a>
+
+{% endblock  %}

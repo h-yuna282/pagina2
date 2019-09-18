@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block principal %}
+
+<h2>Detalles de la habitacion</h2>
+<hr>
+
+<div id="formdiv">
+        <div class="card bg-light mb-3" style="max-width: 40rem;">
+                <div class="card-header"><h5 class="card-title">{{ object.num_habitacion }} </h5></div>
+                <div class="card-body">
+                  <p><strong>estado</strong> {{ object.estado }}</p>
+                  <p><strong>precio:</strong> {{ object.precio }}</p>
+                  <p><strong>tipo de habitacion:</strong> {{ object.tipo_de_habitacion }}</p>
+        </div>
+</div>
+
+
+
+{% endblock  %}

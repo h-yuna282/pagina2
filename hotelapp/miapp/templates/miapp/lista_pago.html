@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block principal %}
+
+
+    <h2>Listado de pagos <a href="{% url 'nuevo_pago' %}" class="btn-sm btn-primary">Nuevo pago</a> </h2>
+    <hr>
+    <table class="table table-hover">
+        <thead>
+                <tr>
+                     <th scope="col">Fecha pago - Cliente</th>
+                    
+                     
+                     
+                </tr>
+
+        </thead>
+        <tbody>
+                {% for pago in object_list  %}
+                    <tr>
+                        <th scope="row"><a href="#"><span class="nombrepago"> {{ pago.fechapago }}, {{ pago.nombre_cliente }} </span>  </a></th>
+                        <td>{{ pago.forma_de_pago }}</td>
+                        <td>{{ pago.reserva }}</td>
+                        <td><a href="#" class="btn btn-warning a-btn-slide-text">
+                                <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                                <span><strong>Editar</strong></span>            
+                            </a></td>
+                        <td><a href="#" class="btn btn-danger a-btn-slide-text">
+                                    <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                                    <span><strong>Borrar</strong></span>            
+                        </a></td>
+                        
+                        
+                    </tr>
+                {% endfor %}
+
+        </tbody>
+        
+
+    </table>
+   
+    
+    
+{% endblock %}

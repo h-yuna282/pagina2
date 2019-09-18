@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block principal %}
+
+
+
+    <h2>Listado de habitaciones</h2>
+    <br>
+    <a href="{% url 'nuevohabitacion' %}" class="btn-sm btn-primary">Agregar nueva habitacion</a> 
+    <hr>
+    <table class="table table-hover">
+        <thead>
+                <tr>
+                     <th scope="col">numero habitacion</th>
+                     <th scope="col">estado</th>
+                     <th scope="col">precio</th>
+                     <th scope="col">tipo de habitacion</th>
+                     
+                </tr>
+        </thead>
+        <tbody>
+                {% for habitacion in object_list  %}
+                    <tr>
+                        <th scope="row"><a href="{% url 'detallehabitacion' habitacion.pk %}"><span class="habitacion"> {{ habitacion.num_habitacion }} </span>  </a></th>
+                        <td>{{ habitacion.estado }}</td>
+                        <td>{{ habitacion.precio }}</td>
+                        <td>{{ habitacion.tipo_de_habitacion }}</td>
+                        <td><a href="{% url 'editarhabitacion' habitacion.id %}" class="btn btn-warning a-btn-slide-text">
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                            <span><strong>Editar</strong></span>            
+                        </a></td>
+                        <td><a href="{% url 'eliminarhabitacion' habitacion.id %}" class="btn btn-danger a-btn-slide-text">
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                            <span><strong>Borrar</strong></span>            
+                        </a></td>
+                        
+                    </tr>
+                {% endfor %}
+
+        </tbody>
+        
+
+    </table>
+   
+    {% endblock %}
+    
